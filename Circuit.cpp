@@ -378,30 +378,3 @@ bool Circuit::invertMatrix(std::vector<std::vector<float>> &a, std::vector<float
 
     return true;
 }
-
-//Sparse Matrix, unfinished (not sure how to proceed)
-bool Circuit::invertMatrix(std::map<std::pair<int, int>, float> &a, std::vector<float>&x, std::vector<std::vector<float>>&b){
-    int n = b.size();
-
-    //augmented matrix => Ab
-    for (int i = 0; i < n; i++){
-        float value = b.at(i).at(0);
-        if(value != 0) a.insert({{i+1, n+1}, value});
-    }
-    
-    // pivot => swap rows 
-    for (int i = 0; i < n; i++) {
-        for (int j = i + 1; j < n; j++) {
-            if (!a.count({i+1, i+1}) || a.count({j+1, i+1}) && std::abs(a.at({j+1, i+1})) > std::abs(a.at({i+1, i+1}))) {
-                //swap rows
-                swapSpareRows(a, j+1, i+1);
-            }
-        }
-    }
-
-    printCombinedSparseMatrix();
-
-    //Got stuck here
-
-    return true;
-}
