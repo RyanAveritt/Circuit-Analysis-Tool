@@ -1,0 +1,9 @@
+Title: Excursion 1: Circuit Analysis Tool
+Name: Ryan Averitt
+Output: "e1 e2 ... en v1 v2 ... vn i1 i2 ... in" within file "output.txt"
+Expectations: "netlist.txt" with proper formatting
+Steps-to-run:
+1. chmod +x compile.sh
+2. ./compile.sh
+3. ./exc1
+Extra: Attempted to utilize a sparse matrix but encountered a wall on how to proceed.
