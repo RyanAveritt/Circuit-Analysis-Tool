@@ -65,5 +65,6 @@ class Circuit{
         bool invertMatrix(std::vector<std::vector<float>> &a, std::vector<float> &x, std::vector<std::vector<float>> &b);
         //Sparse Matrix
         void swapSpareRows(std::map<std::pair<int, int>, float> &a, int row1, int row2);
+        //needs to be implemented
         bool invertMatrix(std::map<std::pair<int, int>, float> &a, std::vector<float> &x, std::vector<std::vector<float>> &b);
 };
